@@ -1,21 +1,22 @@
-# Docker Aseprite container
+# Podman Aseprite container
 
-This repository allows you to compile Aseprite without installing any build tools. All that is required is Docker.
+this repository is a fork of [nilsve/docker-aseprite-linux](https://github.com/nilsve/docker-aseprite-linux) which is nice on its own.
+However, it uses podman instad of Docker along with a few cahnges to the make file.
 
-After spending hours trying to get Aseprite to compile, I decided to just make a Docker image for it 
+The version 
 
-Currently the script checks out Skia version `m102` and Aseprite version `1.2.40`. You can easily change this in `compile.sh` by changing the `-b` flag to the desired versions.
+This repository allows you to compile Aseprite without installing any build tools. All that is required is Podman.
 
-If any of the folders of the projects folder isn't empty, the script will skip checking out the latest versions. In order to re-download, delete the according folder.
+If any of the folders of the projects folder isn't empty, the script will skip checking out the latest versions. In order to re-download, delete the following folder.
 * ./dependencies/depot_tools
 * ./dependencies/skia
 * ./output/aseprite
 
 ## Usage
- * Install docker
+ * Install [Podman](https://podman.io/docs/installation)
  * Clone this repository 
  * cd into cloned repository
- * Run `make build` or `make build-compose` (The latter will use docker-compose to build the image)
+ * Run `make all`
  * Grab a cup of coffee, since this can take quite a while (Compiling build deps, skia, and aseprite)
 
 You can now find the compiled version of Aseprite in the `output/aseprite/build/bin` folder
