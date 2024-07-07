@@ -1,7 +1,7 @@
 # Podman Aseprite container
 
 this repository is a fork of [nilsve/docker-aseprite-linux](https://github.com/nilsve/docker-aseprite-linux) which is nice on its own.
-However, it uses podman instad of Docker along with a few cahnges to the make file.
+However, it uses podman instad of Docker along with a few changes to the make file.
 
 The version 
 
